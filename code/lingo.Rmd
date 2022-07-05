@@ -1,0 +1,110 @@
+---
+title: "Lingo"
+knit: (function(input_file, encoding) {
+  out_dir <- '../docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'lingo.html'))})
+output:
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    theme: sandstone
+---
+
+```{r, include=FALSE}
+here::i_am("code/lingo.Rmd")
+```
+
+## Acronyms 
+
+**ACID** : Atomic Consistent Isolated Durable 
+
+**API** : Application Programming Interface
+
+**AWS** : Amazon Web Services
+
+**BASE** : Basically Available Soft state Eventually consistent
+
+**BPO** : Business Process Outsourcing "bee-poe"
+
+**CD** : Continuous Deployment 
+
+**CI** : Continuous Integration 
+
+**CICD** : Continuous Integration and Continuous Delivery 
+
+**CRUD** : Create, read, update and delete
+
+**EAR** : Enterprise Archive 
+
+**HTTP** : Hypertext Transfer Protocol
+
+**I/O** : Input / Output 
+
+**J2EE** : Java 2 Enterprise Edition 
+
+**OOP** : Object-oriented programming 
+
+**PAHI** : Protocol-Aware Heterogenous Interoperability
+
+**ReST** : Representational state transfer
+
+**SOA** : Service-Oriented Architecture
+
+**STLC** : Software Testing Life Cycle 
+
+**VM** : Virtual Machine 
+
+**WSDL** : Web Services Description Language 
+
+**XML** : Extensive Markup Language
+
+
+## Glossary 
+
+**Auditing** : Tracking user or system activiteis for various needs, such as business or security. 
+
+**Azure** : cloud computing service operated by Microsoft.
+
+**Blue-green deployment** : is a method of installing changes to a web, app, or database server by swapping alternating production and staging servers. 
+
+**BPO** : is the delegation of one or more IT-intensive business processes to an external provider that, in trun, owns, administrates and managers the selected processes based on defined and measurable performance metrics. 
+
+**Coupling** : refers to the degree to which software components are dependent upon each other. For instance, in a tightly-coupled architecture, each component and its associated components must be present in order for code to be executed or complied. 
+
+**Decomposing** : breaking a software problem into smaller pieces that are easier to understand and solve. 
+
+**Distributive transactions** : A database transaction in which two or more network hosts are involved. 
+
+**EAR** : An EAR file is a compressed file that contains everything the application requires for deployment. 
+
+**HTTP** : A request/response protocol based on client/server based architecture.
+
+**Hystrix** : a library that controls the interaction between microservices to provide latency and fault tolerance. 
+
+**Instances** : software copies that are running on multiple machines, as multiple instances. If one crashes, there is another one to process teh request. The purpose of multiple instances is to scale it, make it redundant, and thereby imporve its resiliency. 
+
+**Latency** : time delay between the cause and effect of some physical change in the system. 
+
+**Log Aggregation** : is the process of collecting, standardizing, and consolidating log data from across an IT enviroment in order to facilitate streamlined log analysis.  
+
+**Logging** : converts the log data to a format that can help dev.'s query, search and analyze the log data seamlessly. 
+
+**Node** : either a redistribution point or a communication endpoint. 
+
+**Polyglot** : knowing or using several languages. 
+
+**ReST** : software architectural style that describes a uniform interface between decoupled components. 
+
+**System Decomposition** : Breaking a system into units that make it easier to solve a series of system problems.
+
+**Tenant** : a group of users who share a common access with specific privileges to the software instance. 
+
+**Timeout Logic** : an error that occurs when a program does not receive a response. 
+
+**Tracing** : Used to follow the course of a request transaction as it travels through the application that is being monitored (sometimes called distributed tracing or distrubuted request tracing). 
+
+**WSDL** : definition language. 
+
+**XML** : allows users to define their own customized markup languages. 

@@ -1,0 +1,24 @@
+---
+name: "microservices"
+output_dir: "../docs"
+output:
+  html_document:
+    theme: darkly
+navbar:
+  title: "Microservices"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Core"
+      href: core_concepts.html
+    - text: "Advanced"
+      href: advanced_concepts.html
+    - text: "Arch. Choices"
+      href: making_architecture_choices.html
+    - text: "Lingo"
+      href: lingo.html
+    - text: "Contact"
+      href: contact.html
+---

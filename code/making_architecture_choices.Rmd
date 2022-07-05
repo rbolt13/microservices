@@ -1,0 +1,88 @@
+---
+title: "Making Architecture Choices"
+knit: (function(input_file, encoding) {
+  out_dir <- '../docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'making_architecture_choices.html'))})
+output:
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    theme: sandstone
+---
+
+```{r, include=FALSE}
+here::i_am("code/making_architecture_choices.Rmd")
+knitr::opts_chunk$set(error = FALSE,
+                      message = FALSE,
+                      warnings = FALSE,
+                      echo = FALSE)
+```
+
+## Design considerations
+
+**Continuous integration and continuous delivery should be the first aspect of your design.**
+
+- model a sample pipeline, and ensure you have the most critical steps of your STLC documented and automated if possible
+
+- consider at least those tasks that must be performed in every artifact in your enviroment
+
+**Logging and tracing should be the second aspect of your design.**
+
+- consider you you will aggregate and evaluate your logs and metrics, and design your code to solve that need
+
+- consider the uses of log aggregators and search mechanisms for thos logs early on so you can structure data in log messages appropriately 
+
+### Service Design to Control Latency 
+
+- consider non-blocking code
+
+- standardize your stack when possible 
+
+Design systems to be asynchronous first. 
+
+## The tradeoffs
+
+### Benefits of paying the distribution tax
+
+- distributability 
+
+- well-defined service boundaries 
+
+- scaleability 
+
+### Issues of Complexity
+
+- scalability and deployments 
+
+- large number of moving parts 
+
+### Polyglot Developlment Practices
+
+- many pros and cons
+
+- use it as a tool 
+
+## An argument for edge services
+
+**API layer should be used only as a proxy layer.**
+
+### Outbound Edge Service 
+
+- expose your client's specific needs to the outside worlds
+
+### Inbound / Translation Edge Service 
+
+- Abstract you from third-party dependencies
+
+### Key Benefits of Edge Services 
+
+- manage code transformations similar to other code in your system
+
+- provide a consistent interface even if underlying services change
+
+## Embracing DevOps
+
+**Never underestimate culture.**
+
